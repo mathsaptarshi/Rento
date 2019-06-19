@@ -1,0 +1,142 @@
+http://localhost:4000/api/auth/signin
+{
+	"email": "saptarshi@gmail.com",
+	"password": "123456"
+}
+
+http://localhost:4000/api/auth/signup
+{
+	"name": "Rupam",
+	"username": "Rupam",
+	"email": "rupam@gmail.com",
+	"roles": ["user"],
+	"password": "123456"
+}
+
+get (getUserById)::http://localhost:4000/api/auth/user/2
+
+http://localhost:4000/api/auth/signup
+
+{
+	"firstname": "Rupam",
+	"lastname": "Rupam",
+	"email": "rupam@gmail.com",
+	"password": "123456",
+	"state": "West Bengal",
+	"city": "Kolkata",
+	"pin": "700001",
+	"address": "Near Food Plaza, Alpha1"
+	"license": "LLC123123654T",
+	
+}
+User Update:: http://localhost:4000/api/auth/user/2
+{
+	"firstname": "Rupam",
+	"lastname": "Rupam",
+	"phone":"6546546545",
+	"email": "rupam@gmail.com",
+	"password": "123456",
+	"state": "West Bengal",
+	"city": "Kolkata",
+	"pin": "700001",
+	"license": "LLC123123654T",
+	"address": "Near Food Plaza, Alpha1"
+}
+http://localhost:4000/api/file/upload
+{
+	"name": "Rupam",
+	"description":"6546546545",
+	"type": "rupam@gmail.com",
+	"size": "123456"
+}
+
+get all cab::http://localhost:4000/api/cab
+
+http://localhost:4000/api/cab/create
+{
+		"regno": "123123",
+        "company": "HONDA",
+        "model": "lio2",
+        "type": "Unknown",
+        "state": "WestBengal",
+        "district": "Kolkata",
+        "postalcode": "700001",    
+}
+
+http://localhost:4000/api/cab/update
+{   
+    "id":"8"
+    "regno": "123123",
+    "company": "HONDA",
+    "model": "lio2",
+    "type": "Unknown",
+    "state": "WestBengal",
+    "district": "Kolkata",
+    "postalcode": "700001", 
+}
+
+http://localhost:4000/api/getallcabtypes
+
+
+get all crew::: http://localhost:4000/api/crew
+
+Post :: http://localhost:4000/api/cab/update/8
+
+
+http://localhost:4000/api/crew/create
+{
+		"name": "Unknown",
+        "phone": "9876543210",
+        "email": "lio@gmail.com",
+        "license": "Unknown",
+        "address": "WestBengal bla bla bla",
+        "photo": "photourl",
+        "info": "infotest",
+        "experience": "2"   
+}
+
+http://localhost:4000/api/crew/create
+{
+		"name": "Super+",
+        "description": "city service",
+        "amountday": "5000",
+        "amounthour": "50",
+        "nightcharge": "70",
+        "cabtype": "Sedan",
+        "status": "active" 
+}
+http://localhost:4000/api/tarif/tarifupdate/3
+{
+		"name": "Super+",
+        "description": "city service",
+        "amountday": "5000",
+        "amounthour": "50",
+        "nightcharge": "70",
+        "cabtype": "Sedan",
+        "status": "active" 
+}
+http://localhost:4000/api/tarif
+http://localhost:4000/api/tarif/gettarifbyid/3
+
+
+http://localhost:4000/api/booking/create
+{
+	"userid": "1",
+    "tarifid": "1",
+	"bookingcode": "AD12SS5",
+	"bookingtype": "self",
+    "cabid": "1",
+    "crewid": "5",
+    "name": "Jhon Doe",
+	"phone": "9879879875",
+	"email": "jhon@gmail.com",
+	"license": "WBFJG465",
+    "address": "Kolkata",
+    "pickuplocation": "New Town",
+	"destination": "Sealdah",
+	"days":"2",
+    "hours": "",
+    "bookingamount": "500",
+	"status": "1",
+	"ip": "1237.123.55.6"
+}
